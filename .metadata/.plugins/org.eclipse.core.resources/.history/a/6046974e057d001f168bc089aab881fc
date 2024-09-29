@@ -1,0 +1,43 @@
+package com.mygoal.pageobject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.mygoal.actiondriver.ActionDriver;
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.utility.Log;
+
+public class WebsitePage extends BaseClass {
+	
+	ActionDriver actionDriver = new ActionDriver();
+	
+	@FindBy(xpath = "//span[@class='navbar-toggler-icon']")
+	WebElement navigationButton;
+	
+	@FindBy(xpath = "//a[text()='Home']")
+	WebElement homeOption;
+	
+	@FindBy(xpath = "//h1[text()='Welcome State bank Of India']")
+	WebElement textOfHomeOption;
+	
+	@FindBy(xpath = "//a[text()='Announcements']")
+	WebElement AnnouncementsOption;
+	
+	@FindBy(xpath = "//h1[text()='Announcements']")
+	WebElement textOfAnnouncementsOption;
+	
+	@FindBy(xpath = "//a[text()='About']")
+	WebElement AboutOption;
+	
+	@FindBy(xpath = "")
+	WebElement textOfAboutOption;
+	
+	
+
+	public String getCurrURL() {
+		String websitePageUrl = actionDriver.getCurrentURL(getDriver());
+		Log.info("The URL of the Website page has been stored.");
+		return websitePageUrl;
+	}
+
+}

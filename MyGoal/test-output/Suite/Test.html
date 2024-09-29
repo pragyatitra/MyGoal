@@ -1,0 +1,559 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Sep 29 00:27:07 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>236 seconds (236648 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyAccountManagementClickFunctionalityTest()'><b>verifyAccountManagementClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [New Account] but found []
+	at com.mygoal.tests.DashboardPageTest.verifyAccountManagementClickFunctionalityTest(DashboardPageTest.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace839552703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace839552703'><pre>java.lang.AssertionError: expected [New Account] but found []
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.mygoal.tests.DashboardPageTest.verifyAccountManagementClickFunctionalityTest(DashboardPageTest.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.WebsitePageTest.verifyTitleOfWebsitePage()'><b>verifyTitleOfWebsitePage</b><br>Test class: com.mygoal.tests.WebsitePageTest</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...O...&gt; but was:&lt;...o...&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.mygoal.tests.WebsitePageTest.verifyTitleOfWebsitePage(WebsitePageTest.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1936689207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1936689207'><pre>junit.framework.ComparisonFailure: expected:&lt;...O...&gt; but was:&lt;...o...&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.mygoal.tests.WebsitePageTest.verifyTitleOfWebsitePage(WebsitePageTest.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.mygoal.tests.WebsitePageTest@1787bc24</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyWithdrowClickFunctionalityTest()'><b>verifyWithdrowClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [http://localhost/banking/admin/?page=transaction/withdraw] but found [http://localhost/banking/admin/?page=transaction/deposit]
+	at com.mygoal.tests.DashboardPageTest.verifyWithdrowClickFunctionalityTest(DashboardPageTest.java:176)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1157462948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1157462948'><pre>java.lang.AssertionError: expected [http://localhost/banking/admin/?page=transaction/withdraw] but found [http://localhost/banking/admin/?page=transaction/deposit]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.mygoal.tests.DashboardPageTest.verifyWithdrowClickFunctionalityTest(DashboardPageTest.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.LoginPageTest.verifyLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: com.mygoal.tests.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos; Incorrect username or password&apos;]&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe336d44ef7510d36f368c11db778c82, findElement {value=//div[text()=&apos; Incorrect username or password&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\Anish\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63540/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe336d44ef7510d36f368c11db778c82
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.mygoal.pageobject.LoginPage.getErrorMessage(LoginPage.java:83)
+	at com.mygoal.tests.LoginPageTest.verifyLoginWithInvalidUsernameAndInvalidPassword(LoginPageTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107461513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107461513'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos; Incorrect username or password&apos;]&quot;}
+  (Session info: chrome=129.0.6668.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe336d44ef7510d36f368c11db778c82, findElement {value=//div[text()=&apos; Incorrect username or password&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\Anish\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63540/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe336d44ef7510d36f368c11db778c82
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.mygoal.pageobject.LoginPage.getErrorMessage(LoginPage.java:83)
+	at com.mygoal.tests.LoginPageTest.verifyLoginWithInvalidUsernameAndInvalidPassword(LoginPageTest.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>12</td>
+<td>com.mygoal.tests.LoginPageTest@53b7f657</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyTransferClickFunctionalityTest()'><b>verifyTransferClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [http://localhost/banking/admin/?page=transaction/transfer] but found [http://localhost/banking/admin/]
+	at com.mygoal.tests.DashboardPageTest.verifyTransferClickFunctionalityTest(DashboardPageTest.java:191)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace833298023", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace833298023'><pre>java.lang.AssertionError: expected [http://localhost/banking/admin/?page=transaction/transfer] but found [http://localhost/banking/admin/]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.mygoal.tests.DashboardPageTest.verifyTransferClickFunctionalityTest(DashboardPageTest.java:191)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyTransactionClickFunctionalityTest()'><b>verifyTransactionClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Transaction] but found []
+	at com.mygoal.tests.DashboardPageTest.verifyTransactionClickFunctionalityTest(DashboardPageTest.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1501844857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1501844857'><pre>java.lang.AssertionError: expected [Transaction] but found []
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.mygoal.tests.DashboardPageTest.verifyTransactionClickFunctionalityTest(DashboardPageTest.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.LoginPageTest.verifyTitleOfLoginPage()'><b>verifyTitleOfLoginPage</b><br>Test class: com.mygoal.tests.LoginPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [State bank of India] but found [State bank Of India]
+	at com.mygoal.tests.LoginPageTest.verifyTitleOfLoginPage(LoginPageTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1656369221", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1656369221'><pre>java.lang.AssertionError: expected [State bank of India] but found [State bank Of India]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.mygoal.tests.LoginPageTest.verifyTitleOfLoginPage(LoginPageTest.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.mygoal.tests.LoginPageTest@53b7f657</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mygoal.tests.SettingPageTest.VerifyTitleOfSettingPage()'><b>VerifyTitleOfSettingPage</b><br>Test class: com.mygoal.tests.SettingPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.SettingPageTest@4e07b95f</td></tr>
+<tr>
+<td title='com.mygoal.tests.WebsitePageTest.verifyHomeoptionTest()'><b>verifyHomeoptionTest</b><br>Test class: com.mygoal.tests.WebsitePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.WebsitePageTest@1787bc24</td></tr>
+<tr>
+<td title='com.mygoal.tests.LoginPageTest.verifyUrlOfLoginPage()'><b>verifyUrlOfLoginPage</b><br>Test class: com.mygoal.tests.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mygoal.tests.LoginPageTest@53b7f657</td></tr>
+<tr>
+<td title='com.mygoal.tests.NewAccountPageTest.verifyAccountCreationFunctionalityWithValiddataTest()'><b>verifyAccountCreationFunctionalityWithValiddataTest</b><br>Test class: com.mygoal.tests.NewAccountPageTest</td>
+<td></td>
+<td>6</td>
+<td>com.mygoal.tests.NewAccountPageTest@3b79fd76</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyAnnouncmentClickFunctionalityTest()'><b>verifyAnnouncmentClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.VerifyCurrURL()'><b>VerifyCurrURL</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.SettingPageTest.VerifyCurrentURLOfsettingPage()'><b>VerifyCurrentURLOfsettingPage</b><br>Test class: com.mygoal.tests.SettingPageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mygoal.tests.SettingPageTest@4e07b95f</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyDepositClickFunctionalityTest()'><b>verifyDepositClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.AnnouncementPageTest.VerifyCurrentURLOfAnnouncmentPage()'><b>VerifyCurrentURLOfAnnouncmentPage</b><br>Test class: com.mygoal.tests.AnnouncementPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.AnnouncementPageTest@26df6e3a</td></tr>
+<tr>
+<td title='com.mygoal.tests.AnnouncementPageTest.VerifyTitleOfAnnouncmentPage()'><b>VerifyTitleOfAnnouncmentPage</b><br>Test class: com.mygoal.tests.AnnouncementPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.AnnouncementPageTest@26df6e3a</td></tr>
+<tr>
+<td title='com.mygoal.tests.WebsitePageTest.verifyUrlOfWebsitePage()'><b>verifyUrlOfWebsitePage</b><br>Test class: com.mygoal.tests.WebsitePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.WebsitePageTest@1787bc24</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyNewAccountClickFunctionalityTest()'><b>verifyNewAccountClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifySettingClickFunctionalityTest()'><b>verifySettingClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.ManageAccountPageTest.VerifyCurrentURLOfManageAccountPage()'><b>VerifyCurrentURLOfManageAccountPage</b><br>Test class: com.mygoal.tests.ManageAccountPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.ManageAccountPageTest@51c693d</td></tr>
+<tr>
+<td title='com.mygoal.tests.WebsitePageTest.verifyAnnouncementsOptionTest()'><b>verifyAnnouncementsOptionTest</b><br>Test class: com.mygoal.tests.WebsitePageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.WebsitePageTest@1787bc24</td></tr>
+<tr>
+<td title='com.mygoal.tests.LoginPageTest.verifyLoginWithValidUsernameAndValidPassword()'><b>verifyLoginWithValidUsernameAndValidPassword</b><br>Test class: com.mygoal.tests.LoginPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.LoginPageTest@53b7f657</td></tr>
+<tr>
+<td title='com.mygoal.tests.ManageAccountPageTest.VerifyTitleOfManageAccountPage()'><b>VerifyTitleOfManageAccountPage</b><br>Test class: com.mygoal.tests.ManageAccountPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.ManageAccountPageTest@51c693d</td></tr>
+<tr>
+<td title='com.mygoal.tests.DepositPageTest.VerifyTitleOfDepositPage()'><b>VerifyTitleOfDepositPage</b><br>Test class: com.mygoal.tests.DepositPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.DepositPageTest@1f81aa00</td></tr>
+<tr>
+<td title='com.mygoal.tests.LoginPageTest.verifyTheGotoWebsiteButtonFunctionality()'><b>verifyTheGotoWebsiteButtonFunctionality</b><br>Test class: com.mygoal.tests.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mygoal.tests.LoginPageTest@53b7f657</td></tr>
+<tr>
+<td title='com.mygoal.tests.DepositPageTest.VerifyCurrentURLOfDepositPage()'><b>VerifyCurrentURLOfDepositPage</b><br>Test class: com.mygoal.tests.DepositPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.DepositPageTest@1f81aa00</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyManagementAccountClickFunctionalityTest()'><b>verifyManagementAccountClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.verifyTransactionHistoryClickFunctionalityTest()'><b>verifyTransactionHistoryClickFunctionalityTest</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+<tr>
+<td title='com.mygoal.tests.WebsitePageTest.verifyAboutOptionTest()'><b>verifyAboutOptionTest</b><br>Test class: com.mygoal.tests.WebsitePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mygoal.tests.WebsitePageTest@1787bc24</td></tr>
+<tr>
+<td title='com.mygoal.tests.NewAccountPageTest.verifyTitleOfNewAccountPage()'><b>verifyTitleOfNewAccountPage</b><br>Test class: com.mygoal.tests.NewAccountPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.NewAccountPageTest@3b79fd76</td></tr>
+<tr>
+<td title='com.mygoal.tests.NewAccountPageTest.verifyUrlOfNewAccountPage()'><b>verifyUrlOfNewAccountPage</b><br>Test class: com.mygoal.tests.NewAccountPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mygoal.tests.NewAccountPageTest@3b79fd76</td></tr>
+<tr>
+<td title='com.mygoal.tests.DashboardPageTest.VerifyTitleOfDashboard()'><b>VerifyTitleOfDashboard</b><br>Test class: com.mygoal.tests.DashboardPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mygoal.tests.DashboardPageTest@3116c353</td></tr>
+</table><p>
+</body>
+</html>

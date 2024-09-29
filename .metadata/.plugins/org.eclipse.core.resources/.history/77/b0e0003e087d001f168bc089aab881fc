@@ -1,0 +1,73 @@
+package com.mygoal.pageobject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.mygoal.actiondriver.ActionDriver;
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.utility.Log;
+
+public class WebsitePage extends BaseClass {
+	
+	ActionDriver actionDriver = new ActionDriver();
+	
+	String homeMessage = null;
+	String AnnouncementsMessage = null;
+	String AboutMessage = null;
+	
+	@FindBy(xpath = "//span[@class='navbar-toggler-icon']")
+	WebElement navigationButton;
+	
+	@FindBy(xpath = "//a[text()='Home']")
+	WebElement homeOption;
+	
+	@FindBy(xpath = "//h1[text()='Welcome State bank Of India']")
+	WebElement textOfHomeOption;
+	
+	@FindBy(xpath = "//a[text()='Announcements']")
+	WebElement AnnouncementsOption;
+	
+	@FindBy(xpath = "//h1[text()='Announcements']")
+	WebElement textOfAnnouncementsOption;
+	
+	@FindBy(xpath = "//a[text()='About']")
+	WebElement AboutOption;
+	
+	@FindBy(xpath = "//h1[text()='About State bank Of India']")
+	WebElement textOfAboutOption;
+	
+	
+	public String getCurrURL() {
+		String websitePageUrl = actionDriver.getCurrentURL(getDriver());
+		Log.info("The URL of the Website page has been stored.");
+		return websitePageUrl;
+	}
+	
+	public String verifyHomeoption()
+	{
+		actionDriver.click(getDriver(), navigationButton);
+		actionDriver.click(getDriver(), homeOption);
+		homeMessage=textOfHomeOption.getText().toString();
+		return homeMessage;
+		
+	}
+	
+	public String verifyAnnouncementsOption()
+	{
+		actionDriver.click(getDriver(), navigationButton);
+		actionDriver.click(getDriver(), AboutOption);
+		AnnouncementsMessage=textOfAnnouncementsOption.getText().toString();
+		return AnnouncementsMessage;
+	}
+	
+	public String verifyAboutOption()
+	{
+		actionDriver.click(getDriver(), navigationButton);
+		actionDriver.click(getDriver(), AnnouncementsOption);
+		AboutMessage=textOfAboutOption.getText().toString();
+		return AboutMessage;
+	}
+	
+	
+
+}

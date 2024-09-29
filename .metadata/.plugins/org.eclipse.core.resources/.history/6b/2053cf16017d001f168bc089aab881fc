@@ -1,0 +1,36 @@
+package com.mygoal.tests;
+
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.pageobject.LoginPage;
+import com.mygoal.utility.ExtentManager;
+import com.mygoal.utility.Log;
+
+public class LoginPageTest extends BaseClass {
+
+LoginPage loginPage;
+	
+	public LoginPageTest()
+	{
+		super();
+	}
+	@BeforeMethod
+	public void setup()
+	{
+		launchApp(prop.getProperty("browser"));
+		loginPage = new LoginPage();
+	}
+	@Test
+	public void verifyLoginWithValidUsernameAndValidPassword()
+	{   
+		Log.startTestCase("loginTest");
+		Log.info("user is going to click on SignIn");
+		loginPage.verifyLoginWithValidUsernameAndValidPassword(prop.getProperty("username"),prop.getProperty("password"));
+		Log.endTestCase("loginTest");
+		ExtentManager.endReport();
+	}
+	
+}

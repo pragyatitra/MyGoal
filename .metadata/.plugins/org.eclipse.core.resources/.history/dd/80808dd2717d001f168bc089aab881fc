@@ -1,0 +1,5 @@
+package com.mygoal.pageobject;
+
+public class SettingPage {
+
+}

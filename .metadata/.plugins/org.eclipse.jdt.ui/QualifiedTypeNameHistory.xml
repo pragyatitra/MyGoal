@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.mygoal.pageobject.DashboardPage"/>
+    <fullyQualifiedTypeName name="com.mygoal.pageobject.NewAccountPage"/>
+    <fullyQualifiedTypeName name="com.mygoal.pageobject.TransactionPage"/>
+    <fullyQualifiedTypeName name="com.mygoal.pageobject.WithdrowPage"/>
+    <fullyQualifiedTypeName name="com.mygoal.pageobject.ManageAccountPage"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+</qualifiedTypeNameHistroy>

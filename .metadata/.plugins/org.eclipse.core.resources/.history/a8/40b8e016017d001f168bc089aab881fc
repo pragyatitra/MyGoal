@@ -1,0 +1,15 @@
+package com.mygoal.pageobject;
+
+import com.mygoal.actiondriver.ActionDriver;
+import com.mygoal.baseclass.BaseClass;
+
+public class DashboardPage extends BaseClass{
+	
+	ActionDriver actionDriver = new ActionDriver();
+	
+	public String getCurrURL() throws Throwable {
+		String homePageURL=actionDriver.getCurrentURL(getDriver());
+		return homePageURL;
+	}
+
+}

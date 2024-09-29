@@ -1,0 +1,5 @@
+package com.mygoal.utility;
+
+public class ExtentManager {
+
+}

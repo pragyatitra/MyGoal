@@ -1,0 +1,35 @@
+package com.mygoal.tests;
+
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.pageobject.AnnouncementPage;
+import com.mygoal.pageobject.DashboardPage;
+import com.mygoal.pageobject.DepositPage;
+import com.mygoal.pageobject.LoginPage;
+import com.mygoal.pageobject.ManageAccountPage;
+import com.mygoal.pageobject.NewAccountPage;
+import com.mygoal.pageobject.SettingPage;
+import com.mygoal.pageobject.TransactionPage;
+import com.mygoal.pageobject.TransferPage;
+import com.mygoal.pageobject.WithdrowPage;
+
+public class DashboardPageTest extends BaseClass {
+	private LoginPage loginPage;
+	private DashboardPage dashboardPage;
+	private NewAccountPage newAccountPage;
+	private ManageAccountPage manageAccountPage;
+	private TransactionPage transactionPage;
+	private DepositPage depositPage;
+	private WithdrowPage withdrowPage;
+	private TransferPage transferPage;
+	private AnnouncementPage announcementPage;
+	private SettingPage settingPage;
+	
+	public DashboardPageTest()
+	{
+		super();
+	}
+
+	
+
+	
+}

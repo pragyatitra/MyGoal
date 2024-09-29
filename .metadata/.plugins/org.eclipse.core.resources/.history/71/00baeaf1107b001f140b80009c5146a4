@@ -1,0 +1,30 @@
+package com.mygoal.tests;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.pageobject.DashboardPage;
+import com.mygoal.pageobject.LoginPage;
+
+public class LoginPageTest extends BaseClass {
+
+	private LoginPage loginPage;
+	private DashboardPage dashboardPage;
+	
+	@BeforeMethod
+	public void setup() {
+		launchApp(prop.getProperty("browser")); 
+		loginPage = new LoginPage();
+	}
+	
+	@Test
+	public void loginTest(String uname, String pswd) throws Throwable {
+		dashboardPage=loginPage.login(uname,pswd,dashboardPage);
+	    String actualURL=dashboardPage.getCurrURL();
+	    String expectedURL="http://localhost/banking/admin/";
+	    Assert.assertEquals(actualURL, expectedURL);
+	    
+	}
+}

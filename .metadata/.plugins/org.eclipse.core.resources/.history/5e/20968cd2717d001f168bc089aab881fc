@@ -1,0 +1,45 @@
+package com.mygoal.pageobject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.mygoal.actiondriver.ActionDriver;
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.utility.Log;
+
+public class DashboardPage extends BaseClass {
+	
+
+	ActionDriver actionDriver = new ActionDriver();
+ 
+	@FindBy(css = "i.nav-icon.fas.fa-id-card")
+	WebElement accountManagement;
+	
+	@FindBy(xpath = "//a[@class='nav-link nav-manage_account']")
+	WebElement newAccount;
+	
+	@FindBy(xpath = "//a[@href='./?page=accounts']")
+	WebElement manageAccount;
+	
+	
+	
+	public DashboardPage() {
+		PageFactory.initElements(getDriver(), this);
+	}
+	
+	
+	public String getCurrURL() {
+		String dashboardPageUrl = actionDriver.getCurrentURL(getDriver());
+		Log.info("The URL of the dashboardPageUrl page has been stored.");
+		return dashboardPageUrl;
+	}
+	
+	public String getCurrTitle() {
+		String dashboardPageUrlTitle = actionDriver.getTitle(getDriver());
+		Log.info("The URL of the Dashboard page has been stored.");
+		return  dashboardPageUrlTitle;
+	}
+	
+
+}

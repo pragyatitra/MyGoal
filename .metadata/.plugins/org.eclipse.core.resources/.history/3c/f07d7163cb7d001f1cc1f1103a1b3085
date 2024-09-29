@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.mygoal.tests.DashboardPageTest"/>
+      <class name="com.mygoal.tests.ManageAccountPageTest"/>
+      <class name="com.mygoal.tests.SettingPageTest"/>
+      <class name="com.mygoal.tests.NewAccountPageTest"/>
+      <class name="com.mygoal.tests.DepositPageTest"/>
+      <class name="com.mygoal.tests.WebsitePageTest"/>
+      <class name="com.mygoal.tests.LoginPageTest"/>
+      <class name="com.mygoal.tests.AnnouncementPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

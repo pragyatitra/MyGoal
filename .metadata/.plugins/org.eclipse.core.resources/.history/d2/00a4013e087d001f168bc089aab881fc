@@ -1,0 +1,27 @@
+package com.mygoal.tests;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.pageobject.DashboardPage;
+import com.mygoal.pageobject.LoginPage;
+import com.mygoal.pageobject.WebsitePage;
+
+public class WebsitePageTest extends BaseClass {
+
+	private LoginPage loginPage;
+	private WebsitePage websitePage;
+
+		
+		public WebsitePageTest()
+		{
+			super();
+		}
+		@BeforeMethod
+		public void setup()
+		{
+			launchApp(prop.getProperty("browser"));
+			loginPage = new LoginPage();
+			websitePage = new WebsitePage();
+		}
+}

@@ -1,0 +1,82 @@
+package com.mygoal.tests;
+
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.pageobject.DashboardPage;
+import com.mygoal.pageobject.LoginPage;
+import com.mygoal.pageobject.WebsitePage;
+import com.mygoal.utility.ExtentManager;
+import com.mygoal.utility.Log;
+
+public class LoginPageTest extends BaseClass {
+
+private LoginPage loginPage;
+private WebsitePage websitePage;
+private DashboardPage dashboardPage;
+
+	
+	public LoginPageTest()
+	{
+		super();
+	}
+	@BeforeMethod
+	public void setup()
+	{
+		launchApp(prop.getProperty("browser"));
+		loginPage = new LoginPage();
+	}
+	@Test
+	public void verifyLoginWithValidUsernameAndValidPassword()
+	{   dashboardPage = new DashboardPage();
+		Log.startTestCase("verifyLoginWithValidUsernameAndValidPassword");
+		dashboardPage =loginPage.verifyLoginWithValidUsernameAndValidPassword(prop.getProperty("username"),prop.getProperty("password"));
+		String actualURL=dashboardPage.getCurrURL();
+		String expectedURL="http://localhost/banking/admin/";
+		Log.info("Verifying if user is able to login");
+		Assert.assertEquals(actualURL, expectedURL);
+		Log.info("Login has been successful.");
+		Log.endTestCase("verifyLoginWithValidUsernameAndValidPassword");
+	}
+	
+	@Test
+	public void verifyLoginWithInvalidUsernameAndInvalidPassword()
+	{  
+		Log.startTestCase("verifyLoginWithInvalidUsernameAndInvalidPassword");
+		loginPage.verifyLoginWithValidUsernameAndValidPassword(prop.getProperty("invalidusername"),prop.getProperty("invalidpassword"));
+		String actualError=loginPage.getErrorMessage();
+		String expectedError=" Incorrect username or password";
+		Log.info("Verifying if user is enter wrong username and wrong password");
+		Assert.assertEquals(actualError, expectedError);
+		Log.info("The error message matched.");
+		Log.endTestCase("verifyLoginWithInvalidUsernameAndInvalidPassword");
+		
+	}
+	
+	@Test
+	public void verifyTheGotoWebsiteButtonFunctionality()
+	{  websitePage = new WebsitePage();
+		Log.startTestCase("verifyTheGotoWebsiteButtonFunctionality");
+		websitePage = loginPage.verifyGotoWebsiteFunctionality();
+		String actualURL=websitePage.getCurrURL();
+		String expectedURL="http://localhost/banking/";
+		Log.info("Verifying if user is able to navigate into the website page");
+		Assert.assertEquals(actualURL, expectedURL);
+		Log.info("User has been successful navigate into the website page.");
+		Log.endTestCase("verifyTheGotoWebsiteButtonFunctionality");
+
+		
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		ExtentManager.endReport();
+		getDriver().quit();
+	}
+	
+	
+}

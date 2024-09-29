@@ -1,0 +1,7 @@
+package com.mygoal.pageobject;
+
+import com.mygoal.baseclass.BaseClass;
+
+public class DepositPage extends BaseClass {
+
+}

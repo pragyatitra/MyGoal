@@ -1,0 +1,25 @@
+package com.mygoal.utility;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.testng.annotations.Test;
+
+public class DatabaseTestingLibrary {
+	@Test
+	public void verifyAccountNumber() throws ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhoat:3306/banking_db", "anish","anish");
+		Statement stmt = con.createStatement();
+		ResultSet rs=stmt.executeQuery("select * from accounts");
+		while(rs.next())
+		{
+			System.out.println(rs.getInt(2));
+		}
+	}
+
+}

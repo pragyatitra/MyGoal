@@ -1,0 +1,8 @@
+package com.mygoal.tests;
+
+import com.mygoal.baseclass.BaseClass;
+
+public class DashboardPageTest extends BaseClass {
+
+	
+}

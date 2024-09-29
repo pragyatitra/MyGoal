@@ -1,0 +1,17 @@
+package com.mygoal.pageobject;
+
+import com.mygoal.actiondriver.ActionDriver;
+import com.mygoal.baseclass.BaseClass;
+import com.mygoal.utility.Log;
+
+public class WebsitePage extends BaseClass {
+	
+	ActionDriver actionDriver = new ActionDriver();
+
+	public String getCurrURL() {
+		String websitePageUrl = actionDriver.getCurrentURL(getDriver());
+		Log.info("The URL of the Website page has been stored.");
+		return websitePageUrl;
+	}
+
+}

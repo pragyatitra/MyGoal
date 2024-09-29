@@ -1,0 +1,64 @@
+package com.mygoal.baseclass;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class BaseClass {
+
+	public static Properties prop;
+	public FileInputStream ip;
+	public WebDriver driver;
+
+	public BaseClass() {
+		try {
+			prop = new Properties();
+			ip = new FileInputStream(System.getProperty("user.dir") + "\\Configuration\\config.properties");
+			prop.load(ip);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void launchApp(String browserName) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\Anish\\eclipse-workspace\\Goal\\chromedriver.exe");
+			driver = new ChromeDriver();
+		} else if (browserName.equalsIgnoreCase("FireFox")) {
+			driver = new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("IE")) {
+			driver = new InternetExplorerDriver();
+		} else if (browserName.equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\Anish\\eclipse-workspace\\Goal\\msedgedriver.exe");
+			driver = new EdgeDriver();
+		} else {
+			System.out.println("Please check your browser name in config file");
+		}
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts()
+				.implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
+
+		driver.manage().timeouts()
+				.pageLoadTimeout(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
+		driver.get(prop.getProperty("url"));
+	}
+	public static void main(String[] args)
+	{
+		BaseClass obj = new BaseClass();
+		obj.launchApp(prop.getProperty("Chrome"));
+	}
+}
